@@ -46,6 +46,7 @@ module AxeCraft
 	   Result:AxeHead,
 	   Sound:PZ_Saw,
 	   Time:150.0,
+	   AllowDestroyedItem:true,
 	}
 
 	recipe Sharpen Axe Head
@@ -90,6 +91,7 @@ module AxeCraft
 	   Result:WornAxeHead,
 	   Sound:PZ_Saw,
 	   Time:150.0,
+	   AllowDestroyedItem:true,
 	}
 
 	recipe Sharpen Axe Head
@@ -132,6 +134,7 @@ module AxeCraft
 	   Result:BluntAxeHead,
 	   Sound:PZ_Saw,
 	   Time:150.0,
+	   AllowDestroyedItem:true,
 	}
 
 	recipe Craft Blunt Makeshift Axe
@@ -154,6 +157,7 @@ module AxeCraft
 	   Result:BluntAxeHead,
 	   Sound:PZ_Saw,
 	   Time:150.0,
+	   AllowDestroyedItem:true,
 	}
 
 	item AxeHandle
@@ -208,6 +212,8 @@ module AxeCraft
         TwoHandWeapon = TRUE,
         BreakSound  =   PZ_WoodSnap,
         TreeDamage  =   35,
+        AttachmentType = BigBlade,
+        Tags = ChopTree;CutPlant,
 	}
 
 	item WornAxeHead
@@ -254,6 +260,8 @@ module AxeCraft
         TwoHandWeapon = TRUE,
         BreakSound  =   PZ_WoodSnap,
         TreeDamage  =   25,
+        AttachmentType = BigBlade,
+        Tags = ChopTree;CutPlant,
 	}
 
 	item BluntAxeHead
@@ -262,6 +270,7 @@ module AxeCraft
 		Type	=	Normal,
 		DisplayName	=	Blunt Axe Head,
 		Icon	=	BluntAxeHead,
+
 	}
 
 	item BluntMakeshiftAxe
@@ -273,7 +282,7 @@ module AxeCraft
 		MinimumSwingTime	=	3.0,
 		KnockBackOnNoDeath	=	TRUE,
 		SwingAmountBeforeImpact	=	0.002,
-		Categories	=	Blunt,
+		Categories	=	Axe,
 		ConditionLowerChanceOneIn	=	45,
 		Weight	=	3,
 		SplatNumber	=	1,
@@ -300,5 +309,7 @@ module AxeCraft
         TwoHandWeapon = TRUE,
         BreakSound  =   PZ_WoodSnap,
         TreeDamage  =   20,
+        AttachmentType = BigBlade,
+        Tags = ChopTree;CutPlant,
 	}
 }
