@@ -5,161 +5,7 @@ module AxeCraft
 		Base
 	}
 
-	recipe Craft Axe Handle
-	{
-	   Plank,
-	   keep HuntingKnife,
-	   keep Saw,
-	   
-	   Result:AxeHandle,
-	   Sound:PZ_Saw,
-	   Time:230.0,
-	}
-	
-	recipe Craft Axe Handle
-	{
-	   Plank,
-	   destroy ButterKnife,
-	   keep Saw,
-	   
-	   Result:AxeHandle,
-	   Sound:PZ_Saw,
-	   Time:1230.0,
-	}
-	
-	recipe Craft Axe Handle
-	{
-	   Plank,
-	   destroy KitchenKnife,
-	   keep Saw,
-	   
-	   Result:AxeHandle,
-	   Sound:PZ_Saw,
-	   Time:560.0,
-	}
-	
-	recipe Remove Axe Head
-	{
-	   Axe,
-	   keep Saw,
-
-	   Result:AxeHead,
-	   Sound:PZ_Saw,
-	   Time:150.0,
-	   AllowDestroyedItem:true,
-	}
-
-	recipe Sharpen Axe Head
-	{
-		destroy SharpedStone/Stone,
-		destroy Belt,
-		WornAxeHead,
-		
-		Result:AxeHead,
-		Sound:PZ_FoodSwoosh,
-		Time:3000.0,
-	}
-		
-	recipe Sharpen Axe Head
-	{
-		destroy SharpedStone/Stone,
-		destroy Belt,
-		WornMakeshiftAxe,
-		
-		Result:MakeshiftAxe,
-		Sound:PZ_FoodSwoosh,
-		Time:4000.0,
-	}
-	
-	recipe Craft Makeshift Axe
-	{
-	   AxeHead,
-	   AxeHandle,
-	   Nails,
-	   keep Hammer,
-
-	   Result:MakeshiftAxe,
-	   Sound:PZ_Hammer,
-	   Time:150.0,
-	}
-
-	recipe Remove Axe Head
-	{
-	   MakeshiftAxe,
-	   keep Saw,
-
-	   Result:WornAxeHead,
-	   Sound:PZ_Saw,
-	   Time:150.0,
-	   AllowDestroyedItem:true,
-	}
-
-	recipe Sharpen Axe Head
-	{
-		destroy SharpedStone/Stone,
-		BluntAxeHead,
-		
-		Result:WornAxeHead,
-		Sound:PZ_FoodSwoosh,
-		Time:4000.0,
-	}
-	
-	recipe Sharpen Axe Head
-	{
-		destroy SharpedStone/Stone,
-		BluntMakeshiftAxe,
-		
-		Result:WornMakeshiftAxe,
-		Sound:PZ_FoodSwoosh,
-		Time:4000.0,
-	}
-	
-	recipe Craft Worn Makeshift Axe
-	{
-	   WornAxeHead,
-	   AxeHandle,
-	   Nails,
-	   keep Hammer,
-
-	   Result:WornMakeshiftAxe,
-	   Sound:PZ_Hammer,
-	   Time:150.0,
-	}
-
-	recipe Remove Axe Head
-	{
-	   WornMakeshiftAxe,
-	   keep Saw,
-
-	   Result:BluntAxeHead,
-	   Sound:PZ_Saw,
-	   Time:150.0,
-	   AllowDestroyedItem:true,
-	}
-
-	recipe Craft Blunt Makeshift Axe
-	{
-	   BluntAxeHead,
-	   AxeHandle,
-	   Nails,
-	   keep Hammer,
-
-	   Result:BluntMakeshiftAxe,
-	   Sound:PZ_Hammer,
-	   Time:150.0,
-	}
-
-	recipe Remove Axe Head
-	{
-	   BluntMakeshiftAxe,
-	   keep Saw,
-
-	   Result:BluntAxeHead,
-	   Sound:PZ_Saw,
-	   Time:150.0,
-	   AllowDestroyedItem:true,
-	}
-
+	/**Item START**/
 	item AxeHandle
 	{
 		Weight	=	1,
@@ -312,4 +158,148 @@ module AxeCraft
         AttachmentType = BigBlade,
         Tags = ChopTree;CutPlant,
 	}
+	/**Item END**/
+
+	/**Receipts START**/
+
+	    /*Craft*/
+	    recipe Craft Axe Handle
+    	{
+    	   Plank,
+    	   destroy HuntingKnife/ButterKnife/KitchenKnife,
+    	   keep Saw,
+    	   Result:AxeHandle,
+    	   Sound:PZ_Saw,
+    	   Time:1230.0,
+    	}
+
+    	recipe Craft Makeshift Axe
+         {
+           AxeHead,
+           AxeHandle/HCAxehandle,
+           Nails,
+           keep Hammer,
+
+           Result:MakeshiftAxe,
+           Sound:PZ_Hammer,
+           Time:150.0,
+         }
+    	recipe Craft Worn Makeshift Axe
+    	{
+    	   WornAxeHead,
+    	   AxeHandle/HCAxehandle,
+    	   Nails,
+    	   keep Hammer,
+
+    	   Result:WornMakeshiftAxe,
+    	   Sound:PZ_Hammer,
+    	   Time:150.0,
+    	}
+    	recipe Craft Blunt Makeshift Axe
+        {
+            BluntAxeHead,
+            AxeHandle/HCAxehandle,
+            Nails,
+            keep Hammer,
+
+            Result:BluntMakeshiftAxe,
+            Sound:PZ_Hammer,
+            Time:150.0,
+        }
+    	/*Remove*/
+
+    	recipe Remove Axe Head
+    	{
+    	   Axe,
+    	   keep Saw,
+
+    	   Result:AxeHead,
+    	   Sound:PZ_Saw,
+    	   Time:150.0,
+    	   AllowDestroyedItem:true,
+    	}
+
+
+
+    	recipe Remove Axe Head
+    	{
+    	   WornMakeshiftAxe,
+    	   keep Saw,
+
+    	   Result:BluntAxeHead,
+    	   Sound:PZ_Saw,
+    	   Time:150.0,
+    	   AllowDestroyedItem:true,
+    	}
+
+
+
+    	recipe Remove Axe Head
+    	{
+    	   BluntMakeshiftAxe,
+    	   keep Saw,
+
+    	   Result:BluntAxeHead,
+    	   Sound:PZ_Saw,
+    	   Time:150.0,
+    	   AllowDestroyedItem:true,
+    	}
+
+    	recipe Remove Axe Head
+        {
+           MakeshiftAxe,
+           keep Saw,
+
+           Result:WornAxeHead,
+           Sound:PZ_Saw,
+           Time:150.0,
+           AllowDestroyedItem:true,
+        }
+
+        /*Sharpen*/
+
+    	recipe Sharpen Axe Head
+    	{
+    		destroy SharpedStone/Stone,
+    		destroy Belt,
+    		WornAxeHead,
+
+    		Result:AxeHead,
+    		Sound:PZ_FoodSwoosh,
+    		Time:3000.0,
+    	}
+
+    	recipe Sharpen Axe Head
+    	{
+    		destroy SharpedStone/Stone,
+    		destroy Belt,
+    		WornMakeshiftAxe,
+
+    		Result:MakeshiftAxe,
+    		Sound:PZ_FoodSwoosh,
+    		Time:4000.0,
+    	}
+
+    	recipe Sharpen Axe Head
+    	{
+    		destroy SharpedStone/Stone,
+    		BluntAxeHead,
+
+    		Result:WornAxeHead,
+    		Sound:PZ_FoodSwoosh,
+    		Time:4000.0,
+    	}
+
+    	recipe Sharpen Axe Head
+    	{
+    		destroy SharpedStone/Stone,
+    		BluntMakeshiftAxe,
+
+    		Result:WornMakeshiftAxe,
+    		Sound:PZ_FoodSwoosh,
+    		Time:4000.0,
+    	}
+
+    /**Receipts END**/
+
 }
