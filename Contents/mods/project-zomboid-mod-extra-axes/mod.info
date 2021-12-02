@@ -1,4 +1,8 @@
 id=ExtraAxes
 name=PZ Extra Axes
 poster=poster.png
-description=extra axes! [Author: Tooks, De-Luxis feat vitmak38]
+description=Возможности:
+description=Рецепт: Снять лезвие сломанного топора
+description=Рецепт: Рукоятки для топора
+description=Рецепт: Топор из лезвия и рукоятки (поддерживается рукоять из мода Hydrocraft)
+description=Возможность заточить топор(лезвие) ремнем и камнем [Author: vitmak38]
