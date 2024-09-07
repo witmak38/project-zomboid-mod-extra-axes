@@ -2,10 +2,39 @@ module AxeCraft
 {
 	imports
 	{
-		Base
+		Base,
+    
 	}
 
 	/**Item START**/
+
+
+
+	item AXEbackpack
+    {
+      Type = Container,
+      DisplayName	=	AXE backpack,
+      DisplayCategory = Bag,
+      ClothingItem = Bag_InmateEscapedBag,
+      ClothingItemExtra = Bag_InmateEscapedBag_LB,
+      ClothingItemExtraOption = LowerBack,
+	    clothingExtraSubmenu = OnBack,
+      CanBeEquipped = Back,
+      WeightReduction	= 110,
+      Weight = 1,
+      Capacity = 120,
+      Icon = Duffelbag,
+      OpenSound = OpenBag,
+      CloseSound = CloseBag,
+      PutInSound = PutItemInBag,
+      RunSpeedModifier = 1.5,
+      CanHaveHoles = false,
+
+        ReplaceInSecondHand = Bag_DuffelBag_LHandTINT holdingbagleft,
+        ReplaceInPrimaryHand = Bag_DuffelBag_RHandTINT holdingbagright,
+        WorldStaticModel = DuffelBag_Ground,
+   }
+
 	item AxeHandle
 	{
 		Weight	=	1,
@@ -14,53 +43,16 @@ module AxeCraft
 		DisplayName	=	Axe Handle,
 	}
 	
-	item AxeHead
-	{
-		Weight	=	2,
-		Type	=	Normal,
-		DisplayName	=	Axe Head,
-		Icon	=	AxeHead,
-	}
+	
+  item BluntAxeHead
+  {
+    Weight  = 2,
+    Type  = Normal,
+    DisplayName = Blunt Axe Head,
+    Icon  = BluntAxeHead,
 
-	item MakeshiftAxe
-	{
-		MaxRange	=	1.5,
-		WeaponSprite	=	Fireaxe,
-		MinAngle	=	0.2,
-		Type	=	Weapon,
-		MinimumSwingTime	=	3.0,
-		KnockBackOnNoDeath	=	TRUE,
-		SwingAmountBeforeImpact	=	0.002,
-		Categories	=	Axe,
-		ConditionLowerChanceOneIn	=	45,
-		Weight	=	3,
-		SplatNumber	=	1,
-		PushBackMod	=	0.3,
-		MaxDamage	=	2.5,
-		SubCategory	=	Swinging,
-		ConditionMax	=	10,
-		MaxHitCount	=	2,
-		DoorDamage	=	35,
-		IdleAnim	=	Idle_Weapon2,
-		SwingAnim	=	Bat,
-		CriticalChance	=	20,
-		WeaponWeight	=	3,
-		DisplayName	=	Makeshift Axe,
-		MinRange	=	0.61,
-		SwingTime	=	3.5,
-		HitAngleMod	=	-30,
-		MinDamage	=	1,
-		SplatSize	=	5,
-		KnockdownMod	=	2,
-		SplatBloodOnNoDeath	=	TRUE,
-		Icon	=	AxeNormal,
-		RunAnim	=	Run_Weapon2,
-        TwoHandWeapon = TRUE,
-        BreakSound  =   PZ_WoodSnap,
-        TreeDamage  =   35,
-        AttachmentType = BigBlade,
-        Tags = ChopTree;CutPlant,
-	}
+  }
+	
 
 	item WornAxeHead
 	{
@@ -69,6 +61,57 @@ module AxeCraft
 		DisplayName	=	Worn Axe Head,
 		Icon	=	WornAxeHead,
 	}
+
+  
+
+  item AxeHead
+  {
+    Weight  = 2,
+    Type  = Normal,
+    DisplayName = Axe Head,
+    Icon  = AxeHead,
+  }
+
+
+  item BluntMakeshiftAxe
+  {
+    MaxRange  = 1.5,
+    WeaponSprite  = Fireaxe,
+    MinAngle  = 0.2,
+    Type  = Weapon,
+    MinimumSwingTime  = 3.0,
+    KnockBackOnNoDeath  = TRUE,
+    SwingAmountBeforeImpact = 0.002,
+    Categories  = Axe,
+    ConditionLowerChanceOneIn = 45,
+    Weight  = 3,
+    SplatNumber = 1,
+    PushBackMod = 0.3,
+    MaxDamage = 1.8,
+    SubCategory = Swinging,
+    ConditionMax  = 10,
+    MaxHitCount = 2,
+    DoorDamage  = 35,
+    IdleAnim  = Idle_Weapon2,
+    SwingAnim = Bat,
+    CriticalChance  = 20,
+    WeaponWeight  = 3,
+    DisplayName = Blunt Makeshift Axe,
+    MinRange  = 0.61,
+    SwingTime = 3.5,
+    HitAngleMod = -30,
+    MinDamage = 1,
+    SplatSize = 5,
+    KnockdownMod  = 2,
+    SplatBloodOnNoDeath = TRUE,
+    Icon  = BluntHatchet,
+    RunAnim = Run_Weapon2,
+        TwoHandWeapon = TRUE,
+        BreakSound  =   PZ_WoodSnap,
+        TreeDamage  =   20,
+        AttachmentType = BigBlade,
+        Tags = ChopTree;CutPlant,
+  }
 
 	item WornMakeshiftAxe
 	{
@@ -110,68 +153,117 @@ module AxeCraft
         Tags = ChopTree;CutPlant,
 	}
 
-	item BluntAxeHead
-	{
-		Weight	=	2,
-		Type	=	Normal,
-		DisplayName	=	Blunt Axe Head,
-		Icon	=	BluntAxeHead,
+	
 
-	}
+	
 
-	item BluntMakeshiftAxe
-	{
-		MaxRange	=	1.5,
-		WeaponSprite	=	Fireaxe,
-		MinAngle	=	0.2,
-		Type	=	Weapon,
-		MinimumSwingTime	=	3.0,
-		KnockBackOnNoDeath	=	TRUE,
-		SwingAmountBeforeImpact	=	0.002,
-		Categories	=	Axe,
-		ConditionLowerChanceOneIn	=	45,
-		Weight	=	3,
-		SplatNumber	=	1,
-		PushBackMod	=	0.3,
-		MaxDamage	=	1.8,
-		SubCategory	=	Swinging,
-		ConditionMax	=	10,
-		MaxHitCount	=	2,
-		DoorDamage	=	35,
-		IdleAnim	=	Idle_Weapon2,
-		SwingAnim	=	Bat,
-		CriticalChance	=	20,
-		WeaponWeight	=	3,
-		DisplayName	=	Blunt Makeshift Axe,
-		MinRange	=	0.61,
-		SwingTime	=	3.5,
-		HitAngleMod	=	-30,
-		MinDamage	=	1,
-		SplatSize	=	5,
-		KnockdownMod	=	2,
-		SplatBloodOnNoDeath	=	TRUE,
-		Icon	=	BluntHatchet,
-		RunAnim	=	Run_Weapon2,
+
+  item MakeshiftAxe
+  {
+    MaxRange  = 1.5,
+    WeaponSprite  = Fireaxe,
+    MinAngle  = 0.2,
+    Type  = Weapon,
+    MinimumSwingTime  = 3.0,
+    KnockBackOnNoDeath  = TRUE,
+    SwingAmountBeforeImpact = 0.002,
+    Categories  = Axe,
+    ConditionLowerChanceOneIn = 45,
+    Weight  = 3,
+    SplatNumber = 1,
+    PushBackMod = 0.3,
+    MaxDamage = 2.5,
+    SubCategory = Swinging,
+    ConditionMax  = 10,
+    MaxHitCount = 2,
+    DoorDamage  = 35,
+    IdleAnim  = Idle_Weapon2,
+    SwingAnim = Bat,
+    CriticalChance  = 20,
+    WeaponWeight  = 3,
+    DisplayName = Makeshift Axe,
+    MinRange  = 0.61,
+    SwingTime = 3.5,
+    HitAngleMod = -30,
+    MinDamage = 1,
+    SplatSize = 5,
+    KnockdownMod  = 2,
+    SplatBloodOnNoDeath = TRUE,
+    Icon  = AxeNormal,
+    RunAnim = Run_Weapon2,
         TwoHandWeapon = TRUE,
         BreakSound  =   PZ_WoodSnap,
-        TreeDamage  =   20,
+        TreeDamage  =   35,
         AttachmentType = BigBlade,
         Tags = ChopTree;CutPlant,
-	}
+  }
 	/**Item END**/
 
 	/**Receipts START**/
 
 	    /*Craft*/
+	     
+	    recipe Craft AXEbackpack
+    	{
+    	   Thread=10,
+    	   Twine=2,
+    	   Bag_Schoolbag=3,
+    	   keep SutureNeedle,
+    	   Result:AXEbackpack,
+    	   Sound:PZ_Hammer,
+    	   Time:1230.0,
+         Category:Axe,
+    	}
+
+        recipe Craft Sledgehammer
+        {
+           Hammer,
+           AxeHandle,
+           ScrapMetal=10,
+           keep Hammer,
+           Result:Sledgehammer2,
+           Sound:PZ_Hammer,
+           Time:1230.0,
+           Category:Axe,
+        }
+
+
 	    recipe Craft Axe Handle
     	{
     	   Plank,
     	   destroy HuntingKnife/ButterKnife/KitchenKnife,
     	   keep Saw,
     	   Result:AxeHandle,
+         Category:Axe,
     	   Sound:PZ_Saw,
     	   Time:1230.0,
+         
     	}
+
+      recipe Craft Blunt Makeshift Axe
+        {
+            BluntAxeHead,
+            AxeHandle/HCAxehandle,
+            Nails,
+            keep Hammer,
+            Result:BluntMakeshiftAxe,
+            Sound:PZ_Hammer,
+            Time:150.0,
+            Category:Axe,
+        }
+
+        recipe Craft Worn Makeshift Axe
+      {
+         WornAxeHead,
+         AxeHandle/HCAxehandle,
+         Nails,
+         keep Hammer,
+
+         Result:WornMakeshiftAxe,
+         Sound:PZ_Hammer,
+         Time:150.0,
+         Category:Axe,
+      }
 
     	recipe Craft Makeshift Axe
          {
@@ -183,29 +275,10 @@ module AxeCraft
            Result:MakeshiftAxe,
            Sound:PZ_Hammer,
            Time:150.0,
+           Category:Axe,
          }
-    	recipe Craft Worn Makeshift Axe
-    	{
-    	   WornAxeHead,
-    	   AxeHandle/HCAxehandle,
-    	   Nails,
-    	   keep Hammer,
-
-    	   Result:WornMakeshiftAxe,
-    	   Sound:PZ_Hammer,
-    	   Time:150.0,
-    	}
-    	recipe Craft Blunt Makeshift Axe
-        {
-            BluntAxeHead,
-            AxeHandle/HCAxehandle,
-            Nails,
-            keep Hammer,
-
-            Result:BluntMakeshiftAxe,
-            Sound:PZ_Hammer,
-            Time:150.0,
-        }
+    	
+    	
     	/*Remove*/
 
     	recipe Remove Axe Head
@@ -213,28 +286,39 @@ module AxeCraft
     	   Axe,
     	   keep Saw,
 
-    	   Result:AxeHead,
+    	   Result:BluntAxeHead,
     	   Sound:PZ_Saw,
     	   Time:150.0,
     	   AllowDestroyedItem:true,
+         Category:Axe,
     	}
 
-
-
-    	recipe Remove Axe Head
+    	recipe Remove Hand Axe Head
     	{
-    	   WornMakeshiftAxe,
+    	   HandAxe,
     	   keep Saw,
 
     	   Result:BluntAxeHead,
     	   Sound:PZ_Saw,
     	   Time:150.0,
     	   AllowDestroyedItem:true,
+         Category:Axe,
     	}
 
 
+    	recipe Remove HCSurvivalaxe Head
+    	{
+    	   HCSurvivalaxe,
+    	   keep Saw,
 
-    	recipe Remove Axe Head
+    	   Result:BluntAxeHead,
+    	   Sound:PZ_Saw,
+    	   Time:150.0,
+    	   AllowDestroyedItem:true,
+         Category:Axe,
+    	}
+
+    	recipe Remove Blunt Makeshift Axe Head
     	{
     	   BluntMakeshiftAxe,
     	   keep Saw,
@@ -243,62 +327,92 @@ module AxeCraft
     	   Sound:PZ_Saw,
     	   Time:150.0,
     	   AllowDestroyedItem:true,
+         Category:Axe,
     	}
 
-    	recipe Remove Axe Head
+      recipe Remove Worn Makeshift Axe Head
+      {
+         WornMakeshiftAxe,
+         keep Saw,
+
+         Result:WornAxeHead,
+         Sound:PZ_Saw,
+         Time:150.0,
+         AllowDestroyedItem:true,
+         Category:Axe,
+      }
+
+
+      recipe Remove Makeshift Axe Head
         {
            MakeshiftAxe,
            keep Saw,
 
-           Result:WornAxeHead,
+           Result:AxeHead,
            Sound:PZ_Saw,
            Time:150.0,
            AllowDestroyedItem:true,
+           Category:Axe,
         }
+
+    	
 
         /*Sharpen*/
 
-    	recipe Sharpen Axe Head
-    	{
-    		destroy SharpedStone/Stone,
-    		destroy Belt,
-    		WornAxeHead,
 
-    		Result:AxeHead,
-    		Sound:PZ_FoodSwoosh,
-    		Time:3000.0,
-    	}
+      recipe Sharpen Blunt Makeshift Axe
+      {
+        destroy SharpedStone/Stone,
+        destroy Belt/Belt2,
+        BluntMakeshiftAxe,
 
-    	recipe Sharpen Axe Head
-    	{
-    		destroy SharpedStone/Stone,
-    		destroy Belt,
-    		WornMakeshiftAxe,
+        Result:WornMakeshiftAxe,
+        Sound:PZ_FoodSwoosh,
+        Time:4000.0,
+        Category:Axe,
+      }
 
-    		Result:MakeshiftAxe,
-    		Sound:PZ_FoodSwoosh,
-    		Time:4000.0,
-    	}
+      recipe Sharpen Worn Makeshift Axe
+      {
+        destroy SharpedStone/Stone,
+        destroy Belt/Belt2,
+        WornMakeshiftAxe,
 
-    	recipe Sharpen Axe Head
-    	{
-    		destroy SharpedStone/Stone,
-    		BluntAxeHead,
+        Result:MakeshiftAxe,
+        Sound:PZ_FoodSwoosh,
+        Time:4000.0,
+        Category:Axe,
+      }
 
-    		Result:WornAxeHead,
-    		Sound:PZ_FoodSwoosh,
-    		Time:4000.0,
-    	}
 
-    	recipe Sharpen Axe Head
-    	{
-    		destroy SharpedStone/Stone,
-    		BluntMakeshiftAxe,
+     
 
-    		Result:WornMakeshiftAxe,
-    		Sound:PZ_FoodSwoosh,
-    		Time:4000.0,
-    	}
+      recipe Sharpen Blunt Makeshift Axe Head
+      {
+        destroy SharpedStone/Stone,
+        destroy Belt/Belt2,
+        BluntAxeHead,
+        Category:Axe,
+
+        Result:WornAxeHead,
+        Sound:PZ_FoodSwoosh,
+        Time:4000.0,
+      }
+
+      recipe Sharpen Worn Makeshift Axe Head
+      {
+        destroy SharpedStone/Stone,
+        destroy Belt/Belt2,
+        WornMakeshiftAxeHead,
+
+        Result:AxeHead,
+        Sound:PZ_FoodSwoosh,
+        Time:4000.0,
+        Category:Axe,
+      }
+
+
+    	
 
     /**Receipts END**/
 
