@@ -14,9 +14,8 @@ module AxeCraft
     {
       Type = Container,
       DisplayName	=	AXE backpack,
-      DisplayCategory = Bag,
-      ClothingItem = Bag_InmateEscapedBag,
-      ClothingItemExtra = Bag_InmateEscapedBag_LB,
+      ClothingItem = Bag_DuffelBag,
+      ClothingItemExtra = Bag_DuffelBag,
       ClothingItemExtraOption = LowerBack,
 	    clothingExtraSubmenu = OnBack,
       CanBeEquipped = Back,
@@ -30,9 +29,8 @@ module AxeCraft
       RunSpeedModifier = 1.5,
       CanHaveHoles = false,
 
-        ReplaceInSecondHand = Bag_DuffelBag_LHandTINT holdingbagleft,
-        ReplaceInPrimaryHand = Bag_DuffelBag_RHandTINT holdingbagright,
-        WorldStaticModel = DuffelBag_Ground,
+        ReplaceInSecondHand = Bag_DuffelBag_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_DuffelBag_LHand holdingbagright,
    }
 
 	item AxeHandle
